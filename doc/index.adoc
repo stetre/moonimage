@@ -1,0 +1,26 @@
+= MoonImage Reference Manual
+Stefano Trettel
+v0.1, 2017-09-24
+:toc: left
+:toclevels: 2
+:stylesdir: ./
+:stylesheet: colony.css
+:source-highlighter: pygments
+:pygments-style: autumn
+:source-language: lua
+:exampledir: ../examples
+
+image::powered-by-lua.gif[Lua logo, link=http://www.lua.org]
+
+// Macros for trees: {tS} = "   ", {tI} = "│  ", {tH} = "├─ ", {tL} = "└─ "
+:tS: &#8192;&#8192;&#8192;&#8192;
+:tI: &#9474;&#8192;&#8192;&#8192;
+:tH: &#9500;&#9472;&#8192;
+:tL: &#9492;&#9472;&#8192;
+
+include::preface.adoc[]
+
+include::load.adoc[]
+include::write.adoc[]
+include::enums.adoc[]
+

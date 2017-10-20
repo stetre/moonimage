@@ -1,0 +1,32 @@
+
+[[Write]]
+== Write images
+
+[small]#Rfr: https://github.com/nothings/stb[stb_image_write.h]#
+
+[[write_png]]
+* *write_png*(_filename_, _w_, _h_, <<channels, _channels_>>, _data_, [_stride_]) +
+[small]#Write data to a https://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG] file.
+Expects _w*h*#channels_ bytes of _data_.#
+
+[[write_bmp]]
+* *write_bmp*(_filename_, _w_, _h_, <<channels, _channels_>>, _data_) +
+[small]#Write data to a https://en.wikipedia.org/wiki/BMP_file_format[BMP] file.
+Expects _w*h*#channels_ bytes of _data_.#
+
+[[write_tga]]
+* *write_tga*(_filename_, _w_, _h_, <<channels, _channels_>>, _data_, [_rle_]) +
+[small]#Write data to a https://en.wikipedia.org/wiki/Truevision_TGA[TGA] file.
+Expects _w*h*#channels_ bytes of _data_. +
+Pass _rle_ = _true_ to use RLE compression.#
+
+[[write_jpg]]
+* *write_jpg*(_filename_, _w_, _h_, <<channels, _channels_>>, _data_, _quality_) +
+[small]#Write data to a https://en.wikipedia.org/wiki/JPEG[JPG] file.
+Expects _w*h*#channels_ bytes of _data_. +
+_quality = 1 (min) .. 100 (max)_.#
+
+[[write_hdr]]
+* *write_hdr*(_filename_, _w_, _h_, <<channels, _channels_>>, _data_) +
+[small]#Write data to a https://en.wikipedia.org/wiki/Radiance_(software)#HDR_image_format[HDR] file.
+Expects _w*h*#channels*sizeof(float)_ bytes of _data_.#

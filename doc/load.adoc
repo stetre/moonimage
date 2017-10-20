@@ -1,0 +1,59 @@
+
+== Load images
+
+[small]#Rfr: https://github.com/nothings/stb[stb_image.h]#
+
+[[load]]
+* _data_, _w_, _h_, <<channels, _channels_>> = *load*(_filename_, [<<channels, _desiredchannels_>>], [<<chantype, _chantype_>>]) +
+[small]#Loads an image from a file, and returns the image _data_, its width _w_ and height _h_, and the color _channels_ contained in _data_ (which is the same as _desiredchannels_ unless this is _nil_, in which case _channels_ is the same as in the image file). +
+The returned _data_ is a binary string containing _w*h_ pixels, each pixel consisting of up to 4 interleaved components (one per channel). +
+The type of the components is determined by the _chantype_ parameter: +
+pass:[-]if _chantype_ is '_u8_' or _nil_, then each component is an unsigned 8 bit integer; +
+pass:[-]if _chantype_ is '_u16_', then each component is an unsigned 16 bit integer; +
+pass:[-]if _chantype_ is '_f_', then each component is a single precision float value. +
+Note that this may involve lossy data conversion if _chantype_ does not match how data is stored
+in the image file. +
+(_u16_ values are converted to _u8_ by just keeping the MSB, _u8_ values
+are converted to _u16_ by mapping _x_ to _x*2^8^+x_, while conversion to or from floats is done
+using gamma correction with the current <<gamma_and_scale, gamma and scale>> values.)#
+
+////
+u8 <-> u18 conversions:
+u8->u16   x -> (x>>8) & 0xff  (MSB as 8bit approximation of a 16 bit value)
+u16->u8   x -> (x<<8) + x     (map 0->0 and 255->0xffff)
+////
+
+[[info]]
+* _w_, _h_, <<channels, _channels_>> = *info*(_filename_) +
+[small]#Retrieves information for an image without loading it.#
+
+[[is_hdr]]
+* _boolean_ = *is_hdr*(_filename_) +
+[small]#Returns _true_ the image contained in _filename_ is HDR (High Dynamic Range).#
+
+[[gamma_and_scale]]
+* *set_gamma_and_scale*(_gamma_, _scale_) +
+_gamma_, _scale_ = *gamma_and_scale*( ) +
+[small]#Set/get the _gamma_ and _scale_ values used in https://en.wikipedia.org/wiki/Gamma_correction[gamma correction] (by default, _gamma = 2.2_ and _scale = 1.0_).#
+
+[[load_flags]]
+* *flip_vertically_on_load*(_boolean_) +
+*unpremultiply_on_load*(_boolean_) +
+*convert_iphone_png_to_rgb*(_boolean_) +
+[small]#Load flags that control a few aspects of how an image is loaded (see https://github.com/nothings/stb[stb_image.h] for more details).#
+
+
+[[reset_load_flags]]
+* *reset_load_flags*( ) +
+[small]#Resets all the <<load_flags_, load flags>> to _false_ (which is also their initial value).#
+
+[[reduce_to_u8]]
+* _data_ = *reduce_to_u8*(_data_, _w_, _h_, <<channels, _channels_>>, <<chantype, _chantype_>>) +
+[small]#Downgrades '_u16_' or '_f_' image data to '_u8_' (see <<load, load>>(&nbsp;)).#
+
+////
+[[]]
+* **( ) +
+[small]#@@TODO.#
+////
+

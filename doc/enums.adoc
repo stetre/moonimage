@@ -1,0 +1,11 @@
+
+[[enums]]
+== Enums
+
+[[channels]]
+[small]#*channels*: '_y_' (grey), '_ya_' (grey alpha), '_rgb_', '_rgba_'. +
+Notice that _#channels_ gives the number of channels (e.g. #_'rgb'_ = 3 channels).#
+
+[[chantype]]
+[small]#*chantype*: '_u8_', '_u16_', '_f_'.#
+
