@@ -18,7 +18,7 @@ http://www.lua.org/manual/5.3/manual.html[Lua Reference Manual].
 === Getting and installing
 
 For installation intructions, refer to the README file in the 
-https://github.com/stetre/image[*MoonImage official repository*]
+https://github.com/stetre/moonimage[*MoonImage official repository*]
 on GitHub.
 
 === Module organization
