@@ -3,6 +3,7 @@
 *.dll
 *.o
 *.swp
+*.symbols
 core.*
 examples/output*.*
 local/
