@@ -1,6 +1,0 @@
-- A few functions in the original stb_xxx.h are not declared as static
-  (fgrep "@@" to find them).
-  I've made them static to avoid linking problems in the case MoonImage
-  is used with other modules that include the same stb_xxx.h libraries.
-  (Stefano Trettel, 2017/09/24)
-
