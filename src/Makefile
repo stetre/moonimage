@@ -37,6 +37,7 @@ COPT	+= -O2
 #COPT	+= -O0 -g
 #COPT	+= -m32
 COPT	+= -Wall -Wextra -Wpedantic
+COPT	+= -DCOMPAT53_PREFIX=moonglmath_compat_
 COPT	+= -Wno-unused-function -Wno-implicit-fallthrough #@@
 COPT    += -std=gnu99
 COPT 	+= -DLUAVER=$(LUAVER)
