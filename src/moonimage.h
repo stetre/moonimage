@@ -35,7 +35,7 @@
 #include "lauxlib.h"
 #include "compat-5.3.h"
 
-#define MOONIMAGE_VERSION      "0.2"
+#define MOONIMAGE_VERSION      "0.3"
 
 #endif /* moonimageDEFINED */
 

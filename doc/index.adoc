@@ -1,6 +1,6 @@
 = MoonImage Reference Manual
 Stefano Trettel
-v0.2, 2019-08-05
+v0.3, 2020-04-21
 :toc: left
 :toclevels: 2
 :stylesdir: ./
