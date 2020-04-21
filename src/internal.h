@@ -122,6 +122,7 @@ const char* errstring(int err);
 int luaopen_moonimage(lua_State *L);
 void moonimage_open_load(lua_State *L);
 void moonimage_open_write(lua_State *L);
+void moonimage_open_perlin(lua_State *L);
 
 /*------------------------------------------------------------------------------*
  | Debug and other utilities                                                    |

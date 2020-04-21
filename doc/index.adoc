@@ -22,5 +22,6 @@ include::preface.adoc[]
 
 include::load.adoc[]
 include::write.adoc[]
+include::perlin.adoc[]
 include::enums.adoc[]
 

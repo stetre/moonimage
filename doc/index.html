@@ -785,6 +785,7 @@ p.tableblock.header { color: #6d6e71; }
 </li>
 <li><a href="#_load_images">Load images</a></li>
 <li><a href="#Write">Write images</a></li>
+<li><a href="#Write">Perlin noise</a></li>
 <li><a href="#enums">Enums</a></li>
 </ul>
 </div>
@@ -999,6 +1000,23 @@ Expects <em>w*h*#channels*sizeof(float)</em> bytes of <em>data</em>.</span></p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="Write">Perlin noise</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small">Rfr: <a href="https://github.com/nothings/stb">stb_perlin.h</a></span></p>
+</div>
+<div id="perlin" class="ulist">
+<ul>
+<li>
+<p><em>value</em> = <strong>perlin</strong>(<em>x</em>, [<em>y</em>, <em>z</em>, <em>xwrap</em>, <em>ywrap</em>, <em>zwrap</em>, <em>seed</em>])<br>
+<span class="small">Computes a random value at coordinates <em>(x, y, z)</em>.<br>
+Binding to <em>stb_perlin_noise3_seed( )</em>. See stb_perlin.h for details.</span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="enums">Enums</h2>
 <div class="sectionbody">
 <div id="channels" class="paragraph">
@@ -1020,7 +1038,7 @@ Notice that <em>#channels</em> gives the number of channels (e.g. #<em>'rgb'</em
 <div id="footer">
 <div id="footer-text">
 Version 0.2<br>
-Last updated 2019-08-05 12:22:29 CEST
+Last updated 2020-04-21 12:43:08 CEST
 </div>
 </div>
 </body>

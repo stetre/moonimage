@@ -59,6 +59,7 @@ int luaopen_moonimage(lua_State *L)
     /* add functions: */
     moonimage_open_load(L);
     moonimage_open_write(L);
+    moonimage_open_perlin(L);
 
 #if 0 //@@
     /* Add functions implemented in Lua */

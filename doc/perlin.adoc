@@ -1,0 +1,11 @@
+
+[[Write]]
+== Perlin noise
+
+[small]#Rfr: https://github.com/nothings/stb[stb_perlin.h]#
+
+[[perlin]]
+* _value_ = *perlin*(_x_, [_y_, _z_, _xwrap_, _ywrap_, _zwrap_, _seed_]) +
+[small]#Computes a random value at coordinates _(x, y, z)_. +
+Binding to _stb_perlin_noise3_seed( )_. See stb_perlin.h for details.#
+
